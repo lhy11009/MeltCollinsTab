@@ -1,1 +1,18 @@
 # Script for Melt Calculation
+
+# usage of MeltPlot.py
+plot figure of melt result
+
+set up environment:
+
+    conda create --file CitcomSp.yml  
+    conda activate CitcomSp
+
+see usage:
+    python MeltPlot.py --help
+
+# usage of FileGenerate.py
+combine MF file, read input from inputFile
+
+# usage of CheckData.py
+check data range and duplicate data

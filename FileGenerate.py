@@ -55,8 +55,9 @@ def main():
     stepInEpisode = [step for step in step_tuple if step <= e_steps[-1] and step > 0]
     #   Combine MF files
     combineS = CombineSurfFile('MF', inD)
-#    combineS(_route, _caseName, 1000, nprocz, "surf",
-#             obl=True, expandLon=False, oroute=_oroute, area=1.0)
+    combineS(_route, _caseName, 1000, nprocz, "surf",
+             obl=True, expandLon=False, oroute=_oroute, area=1.0)
+    exit()
     num_cores = multiprocessing.cpu_count()
     print("start parallel: cores %d" % num_cores)
     Parallel(n_jobs=num_cores)(delayed(combineS)(_route, _caseName, step, nprocz, "surf",

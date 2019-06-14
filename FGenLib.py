@@ -53,6 +53,10 @@ def adjustThetaPhi(coord, index):
 def adjustThetaPhi1(coord, index):
     for i in range(coord.shape[0]):
         coord[i, index[0]] = np.pi/2.0 - coord[i, index[0]]
+        if coord[i, index[1]] < -np.pi:
+            coord[i, index[1]] += 2.0 * np.pi
+        elif coord[i, index[1]] > np.pi:
+            coord[i, index[1]] -= 2.0 * np.pi
 
 
 def expandLonBound(_coord, _field, index, bd, limit):
@@ -286,12 +290,16 @@ class CombineSurfFile():
             _type = 'w'
         with open(filename, _type) as f:
             for i in range(Mshape[0]):
-                f.write("%.4e" % coord[i, 1])
+                f.write("%.5e" % coord[i, 1])
                 for j in range(2, cshape[1]):
-                    f.write(" %.4e" % coord[i, j])
+                    f.write(" %.5e" % coord[i, j])
                 for j in range(Mshape[1]):
-                    f.write(" %.4e" % MF0[i, j])
+                    f.write(" %.5e" % MF0[i, j])
                 f.write("\n")
+
+    # check data range
+    def CheckRange(self, filename, MF0, coord, **kwargs):
+        pass
 
     def MaxMin(self,MF,column):
         mm = np.zeros(2)

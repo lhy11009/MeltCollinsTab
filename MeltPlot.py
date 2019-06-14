@@ -23,8 +23,8 @@ column = [0, 2, 3, 4, 5]
 
 #   plot using python basemap
 def BmPlot(caseName, step, _pTotal=False, **kwargs):
-    route = os.path.join('.', caseName)
-    oroute = '.'
+    route = os.path.join('..', caseName)
+    oroute = '../eps'
     try:
         _chemical = kwargs['chemical']
     except KeyError:

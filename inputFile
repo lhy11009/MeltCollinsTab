@@ -1,6 +1,6 @@
 caseName=MgH30v1e-2V5e20E100_hot
 route=/media/p300/Seagate0/mg_project/MgH30v1e-2V5e20E100_hot
-oroute=.
+oroute=..
 nprocx=2
 nprocz=2
 nodex=65
