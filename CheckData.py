@@ -16,6 +16,8 @@ def DataCheck(_filename, _col, **kwargs):
     if os.path.isfile(_filename) is False:
         raise NoFileError(_filename)
     _data = np.genfromtxt(_filename, skip_header=_header)
+    if len(_data.shape) == 1:
+        _data.resize(_data.shape[0], 1)
     _min = np.min(_data[:, _col])
     _max = np.max(_data[:, _col])
     pts = np.array(range(_data.shape[0]))
@@ -24,7 +26,7 @@ def DataCheck(_filename, _col, **kwargs):
     ax.set(xlabel='N', ylabel='Data column %d' % _col,
            title='Data Range %.4e %.4e' % (_min, _max))
     fig.tight_layout()
-    fig.savefig("./eps/dataCheck.png")
+    fig.savefig("../eps/dataCheck.png")
 
 
 def SameValue(_d0, _d1, lim):

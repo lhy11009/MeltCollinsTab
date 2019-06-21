@@ -1,9 +1,6 @@
 # Script for Melt Calculation
 
-# usage of MeltPlot.py
-plot figure of melt result
-
-set up environment:
+## set up environment:
 
     conda create --file CitcomSp.yml  
     conda activate CitcomSp
@@ -11,8 +8,46 @@ set up environment:
 see usage:
     python MeltPlot.py --help
 
-# usage of FileGenerate.py
+## MeltPlot.py
+
+plot figure of melt result
+
+## FileGenerate.py
+
 combine MF file, read input from inputFile
 
-# usage of CheckData.py
+## CheckData.py
+
 check data range and duplicate data
+
+## ElementArea.py
+
+generate an equal-area grid
+
+## MaxD.py
+
+reorder the mf file and return max value
+
+## MeltPlot.py
+
+plot melt in projection
+
+## MfPlot.py
+
+plot melt with time
+
+SurfAreaPlot.py
+
+plot area of elements
+
+## FGenLib.py
+
+library
+
+## Mathf.py
+
+library
+
+## ReadFiles.py
+
+library

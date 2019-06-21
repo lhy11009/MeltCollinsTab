@@ -1,0 +1,8 @@
+fileCoord=../MgH30v1e-2V5e20E100_hot/MgH30v1e-2V5e20E100_hot.MF0.1000
+routeA=/media/p300/Seagate0/mg_project/MgArea1
+prefixA=a
+nprocx=2
+nprocz=2
+nodex=65
+nodez=65
+

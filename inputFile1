@@ -1,0 +1,9 @@
+caseName=MgArea1
+prefix=a
+route=/media/p300/Seagate0/mg_project/MgArea1
+oroute=..
+nprocx=2
+nprocz=2
+nodex=65
+nodez=65
+
