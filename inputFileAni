@@ -1,0 +1,11 @@
+droute=/media/p300/Seagate0/mg_project/MgH30v1e-2V5e20E100_hot
+citcomsFile=/media/p300/Seagate0/mg_project/MgH30v1e-2V5e20E100_hot/input_solidus_i/in_65moon
+route=../MgH30v1e-2V5e20E100_hot
+caseName=MgH30v1e-2V5e20E100_hot
+prefix=MgH30v1e-2V5e20E100_hot
+froute=../eps
+groute=../eps
+nprocx=2
+nprocz=2
+nodex=65
+nodez=65
